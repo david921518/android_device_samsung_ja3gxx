@@ -45,8 +45,8 @@ BOARD_MODEM_TYPE := xmm6360
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/ja3gxx/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    device/samsung/ja3gxx/sepolicy
 
 # inherit from the proprietary version
 -include vendor/samsung/ja3gxx/BoardConfigVendor.mk
