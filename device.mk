@@ -24,19 +24,12 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.universal5410 \
-    init.target.rc \
-    ueventd.universal5410.rc
-
 # Audio
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths_0.xml
 
 PRODUCT_PACKAGES += \
-    AudioWorkaround \
-    audio.primary.universal5410
+    AudioWorkaround
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -47,19 +40,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdmitry
 
-# Radio (audio-dependency)
-PRODUCT_PACKAGES += \
-    libsecril-client \
-    libsecril-client-sap
+# Radio
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init/rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/rild.rc
 
-# Radio (RIL)
+# Ramdisk
 PRODUCT_PACKAGES += \
-    libxml2 \
-    libprotobuf-cpp-full \
-    modemloader
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carrier=unknown
+    init.baseband.rc
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/ja3gxx/ja3gxx-vendor.mk)

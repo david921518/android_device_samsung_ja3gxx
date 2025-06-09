@@ -42,12 +42,7 @@ LINKER_FORCED_SHIM_LIBS := /system/bin/gpsd|libdmitry.so
 
 # Radio
 BOARD_MODEM_TYPE := xmm6360
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_CLASS := ../../../device/samsung/ja3gxx/ril
-TARGET_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
-
-# Recovery
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5410
+BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
@@ -57,4 +52,4 @@ BOARD_SEPOLICY_DIRS += \
 -include vendor/samsung/ja3gxx/BoardConfigVendor.mk
 
 # inherit common board flags
-include device/samsung/exynos5410-common/BoardConfigCommon.mk
+include device/samsung/universal5410-common/BoardConfigCommon.mk

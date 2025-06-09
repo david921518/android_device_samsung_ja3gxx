@@ -1,7 +1,7 @@
 $(call inherit-product, device/samsung/ja3gxx/full_ja3gxx.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_NAME := lineage_ja3gxx
 PRODUCT_DEVICE := ja3gxx
