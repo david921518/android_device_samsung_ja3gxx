@@ -37,10 +37,6 @@ TARGET_AUDIOHAL_VARIANT := samsung
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-# Radio
-BOARD_MODEM_TYPE := xmm6360
-BOARD_PROVIDES_LIBRIL := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5410
 

@@ -61,8 +61,5 @@ PRODUCT_PACKAGES += \
     libxml2 \
     libprotobuf-cpp-full
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carrier=unknown
-
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/ja3gxx/ja3gxx-vendor.mk)
