@@ -27,6 +27,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.universal5410 \
+    fstab.ramdisk \
     init.target.rc \
     ueventd.universal5410.rc
 
