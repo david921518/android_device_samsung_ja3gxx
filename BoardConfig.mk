@@ -48,7 +48,7 @@ BOARD_PROVIDES_LIBRIL := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5410
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
+#BOARD_SEPOLICY_DIRS += \
     device/samsung/ja3gxx/sepolicy
 
 # inherit from the proprietary version
