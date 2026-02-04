@@ -15,6 +15,9 @@
 # limitations under the License.
 #
 
+# Inherit from exynos5410-common
+$(call inherit-product, device/samsung/exynos5410-common/exynos5410.mk)
+
 LOCAL_PATH := device/samsung/ja3gxx
 
 # overlays
@@ -33,7 +36,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths_0.xml
+    $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths_0.xml
 
 PRODUCT_PACKAGES += \
     AudioWorkaround \

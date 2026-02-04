@@ -1,5 +1,5 @@
-# Copyright (C) 2013 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2013-2016 The CyanogenMod Project
+# Copyright (C) 2017-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,12 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from ja3gxx device
 $(call inherit-product, device/samsung/ja3gxx/device.mk)
 
-# Inherit from common board repo
-$(call inherit-product, device/samsung/exynos5410-common/exynos5410.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_ja3gxx
+PRODUCT_NAME := lineage_ja3gxx
 PRODUCT_DEVICE := ja3gxx
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9500
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=ja3gxx \
+    TARGET_DEVICE=ja3gxx \
+    PRIVATE_BUILD_DESC="ja3gxx-user 5.0.1 LRX22C I9500XXUHOG1 release-keys"
+
+BUILD_FINGERPRINT := "samsung/ja3gxx/ja3g:5.0.1/LRX22C/I9500XXUHOG1:user/release-keys"

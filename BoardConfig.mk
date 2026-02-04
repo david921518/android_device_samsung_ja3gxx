@@ -37,9 +37,6 @@ TARGET_AUDIOHAL_VARIANT := samsung
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-# Linker
-LINKER_FORCED_SHIM_LIBS := /system/bin/gpsd|libdmitry.so
-
 # Radio
 BOARD_MODEM_TYPE := xmm6360
 BOARD_PROVIDES_LIBRIL := true
@@ -50,6 +47,10 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5410
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
     device/samsung/ja3gxx/sepolicy
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /vendor/bin/hw/gpsd|/vendor/lib/libdmitry.so
 
 # inherit from the proprietary version
 -include vendor/samsung/ja3gxx/BoardConfigVendor.mk
