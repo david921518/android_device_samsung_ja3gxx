@@ -1,6 +1,3 @@
-import /vendor/etc/init/hw/init.universal5410.usb.rc
-import /vendor/etc/init/hw/init.universal5410.wifi.rc
-
 on post-fs-data
 # PMK permission
     mkdir /efs/mc 0770 radio system
