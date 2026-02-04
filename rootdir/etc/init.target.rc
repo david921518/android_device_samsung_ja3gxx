@@ -34,15 +34,10 @@ on post-fs-data
 on boot
    chown media sdcard_rw /sys/class/power_supply/battery/store_mode
 
-service modemloader /system/bin/modemloader
-    class core
-    oneshot
-
 service cpboot-daemon /system/bin/cbd -d -txmm626x -bh -mh -p 13
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r shell
-    disabled
 
 service ril-daemon /system/bin/rild
     class main
@@ -53,10 +48,6 @@ service ril-daemon /system/bin/rild
     group radio cache inet misc audio sdcard_r sdcard_rw diag log readproc wakelock
     onrestart restart cpboot-daemon
     disabled
-
-on property:ro.modemloader.done=1
-    start cpboot-daemon
-    start ril-daemon
 
 on property:persist.sys.cpboot=disable
     stop ril-daemon
