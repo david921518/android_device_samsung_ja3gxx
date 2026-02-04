@@ -34,13 +34,13 @@ on post-fs-data
 on boot
    chown media sdcard_rw /sys/class/power_supply/battery/store_mode
 
-service cpboot-daemon /system/bin/cbd -d -txmm626x -bh -mh -p 13
+service cpboot-daemon /vendor/bin/cbd -d -txmm626x -bh -mh -p 13
     class main
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r shell
 
 # GPS
-service gpsd /system/bin/gpsd -c /system/etc/gps.xml
+service gpsd /vendor/bin/hw/gpsd -c /system/etc/gps.xml
     class main
     user gps
     group system inet net_raw wakelock
