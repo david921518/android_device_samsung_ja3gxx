@@ -59,8 +59,7 @@ PRODUCT_PACKAGES += \
 # Radio (RIL)
 PRODUCT_PACKAGES += \
     libxml2 \
-    libprotobuf-cpp-full \
-    modemloader
+    libprotobuf-cpp-full
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=unknown
