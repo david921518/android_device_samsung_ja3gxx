@@ -30,6 +30,7 @@ TARGET_SOC := exynos5410
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_ja3gxx_defconfig
+TARGET_KERNEL_RECOVERY_CONFIG := lineageos_ja3gxx_recovery_defconfig
 
 # Audio
 TARGET_AUDIOHAL_VARIANT := samsung
