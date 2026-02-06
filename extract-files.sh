@@ -57,5 +57,6 @@ extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" $BASE/vendor/bin/gpsd
+sed -i "s|system/bin/gpsd|vendor/bin/gpsd|g" $BASE/vendor/lib/libsec-ril.so
 
 "$MY_DIR"/setup-makefiles.sh
