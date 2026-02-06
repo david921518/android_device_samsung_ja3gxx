@@ -55,4 +55,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC"
 
+BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
+sed -i "s/SSLv3_client_method/SSLv23_method\x00\x00\x00\x00\x00\x00/" $BASE/vendor/bin/gpsd
+
 "$MY_DIR"/setup-makefiles.sh
