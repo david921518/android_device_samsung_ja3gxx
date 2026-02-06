@@ -47,7 +47,7 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5410
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /vendor/bin/hw/gpsd|/vendor/lib/libdmitry.so
+    /vendor/bin/gpsd|/vendor/lib/libdmitry.so
 
 # inherit from the proprietary version
 -include vendor/samsung/ja3gxx/BoardConfigVendor.mk

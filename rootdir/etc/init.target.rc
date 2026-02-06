@@ -40,7 +40,7 @@ service cpboot-daemon /vendor/bin/cbd -d -txmm626x -bh -mh -p 13
     group radio cache inet misc audio sdcard_rw log sdcard_r shell
 
 # GPS
-service gpsd /vendor/bin/hw/gpsd -c /system/etc/gps.xml
+service gpsd /vendor/bin/gpsd -c /system/etc/gps.xml
     class main
     user gps
     group system inet net_raw wakelock

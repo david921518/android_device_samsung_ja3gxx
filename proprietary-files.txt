@@ -8,7 +8,7 @@ vendor/firmware/srp_vliw.bin
 vendor/firmware/bcm4335_V0343.0347.hcd
 
 # GPS
-bin/gpsd:vendor/bin/hw/gpsd
+bin/gpsd:vendor/bin/gpsd
 lib/hw/gps.universal5410.so:vendor/lib/hw/gps.universal5410.so
 lib/libwrappergps.so:vendor/lib/libwrappergps.so
 
