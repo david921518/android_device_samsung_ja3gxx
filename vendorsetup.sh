@@ -1,3 +1,0 @@
-add_lunch_combo lineage_ja3gxx-user
-add_lunch_combo lineage_ja3gxx-userdebug
-add_lunch_combo lineage_ja3gxx-eng
